@@ -5,89 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Holistic Oasis</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Georgia',serif;color:#2c2a25;background:#faf8f4}
-  a{color:inherit;text-decoration:none}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Georgia',serif;color:#2c2a25;background:#faf8f4}
+a{color:inherit;text-decoration:none}
 
-  /* NAV */
-  nav{position:fixed;top:0;width:100%;background:rgba(250,248,244,0.92);backdrop-filter:blur(6px);z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(139,120,90,0.15)}
-  .logo{font-size:1.2rem;letter-spacing:0.12em;color:#5a4a35}
-  nav ul{list-style:none;display:flex;gap:2rem}
-  nav ul li a{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:#7a6a55;transition:color 0.2s}
-  nav ul li a:hover{color:#5a4a35}
+nav{position:fixed;top:0;width:100%;background:rgba(250,248,244,0.95);backdrop-filter:blur(6px);z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(139,120,90,0.15)}
+.logo{font-size:1.2rem;letter-spacing:0.12em;color:#5a4a35}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul li a{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:#7a6a55;transition:color 0.2s}
+nav ul li a:hover{color:#5a4a35}
 
-  /* HERO */
-  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;background:linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),url('hero.jpg') center/cover no-repeat;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a09070' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-  .hero-tag{font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:#8a7a62;margin-bottom:1.5rem}
-  .hero h1{font-size:clamp(2.8rem,7vw,5.5rem);font-weight:400;line-height:1.1;color:#3a2e1e;letter-spacing:0.02em;margin-bottom:1.5rem}
-  .hero h1 em{font-style:italic;color:#7a6a55}
-  .hero p{font-family:'Helvetica Neue',sans-serif;font-size:1.05rem;line-height:1.8;color:#5a4a35;max-width:520px;margin:0 auto 2.5rem}
-  .btn{display:inline-block;font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;padding:1rem 2.5rem;border:1px solid #8a7a62;color:#3a2e1e;background:transparent;cursor:pointer;transition:all 0.3s}
-  .btn:hover{background:#8a7a62;color:#faf8f4}
-  .btn-light{border-color:#faf8f4;color:#faf8f4}
-  .btn-light:hover{background:#faf8f4;color:#3a2e1e}
-  .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:#8a7a62;font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;animation:bounce 2s infinite}
-  @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-  .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,#8a7a62,transparent)}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;background:linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68)),url('hero.jpg') center/cover no-repeat;position:relative}
+.hero-tag{font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:1.5rem}
+.hero h1{font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.1;color:#ffffff;letter-spacing:0.02em;margin-bottom:1.5rem;text-shadow:2px 2px 0 rgba(0,0,0,1),4px 4px 0 rgba(0,0,0,0.5)}
+.hero h1 em{font-style:italic;color:#f0e6d0;text-shadow:2px 2px 0 rgba(0,0,0,1)}
+.hero p{font-family:'Helvetica Neue',sans-serif;font-size:1.05rem;line-height:1.8;color:#ffffff;max-width:520px;margin:0 auto 2.5rem;text-shadow:1px 1px 0 rgba(0,0,0,1),0 0 20px rgba(0,0,0,0.8)}
+.btn{display:inline-block;font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;padding:1rem 2.5rem;border:1px solid #ffffff;color:#ffffff;background:transparent;cursor:pointer;transition:all 0.3s}
+.btn:hover{background:#ffffff;color:#3a2e1e}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.7);font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.7),transparent)}
 
-  /* SECTIONS */
-  section{padding:6rem 2rem}
-  .section-inner{max-width:1000px;margin:0 auto}
-  .section-label{font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:#a09070;margin-bottom:1rem}
-  .section-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:400;color:#3a2e1e;line-height:1.2;margin-bottom:1.5rem}
-  .section-title em{font-style:italic;color:#7a6a55}
-  .divider{width:40px;height:1px;background:#c4b89a;margin:1.5rem 0}
+section{padding:6rem 2rem}
+.section-inner{max-width:1000px;margin:0 auto}
+.section-label{font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:#a09070;margin-bottom:1rem}
+.section-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:400;color:#3a2e1e;line-height:1.2;margin-bottom:1.5rem}
+.section-title em{font-style:italic;color:#7a6a55}
+.divider{width:40px;height:1px;background:#c4b89a;margin:1.5rem 0}
 
-  /* SERVICES */
-  .services{background:#f2ede4}
-  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
-  .service-card{background:#faf8f4;padding:2rem;border:1px solid rgba(139,120,90,0.18);transition:transform 0.25s,box-shadow 0.25s}
-  .service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(90,74,53,0.1)}
-  .service-icon{font-size:1.8rem;margin-bottom:1rem}
-  .service-card h3{font-size:1.15rem;font-weight:400;color:#3a2e1e;margin-bottom:0.75rem;letter-spacing:0.04em}
-  .service-card p{font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;line-height:1.8;color:#7a6a55}
-  .service-tag{display:inline-block;font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.75rem;background:#e8e0d0;color:#7a6a55;margin-top:1rem}
+.services{background:#f2ede4}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+.service-card{background:#faf8f4;border:1px solid rgba(139,120,90,0.18);overflow:hidden;transition:transform 0.25s,box-shadow 0.25s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(90,74,53,0.1)}
+.service-card-body{padding:1.5rem}
+.service-icon{font-size:1.5rem;margin-bottom:0.75rem}
+.service-card h3{font-size:1.1rem;font-weight:400;color:#3a2e1e;margin-bottom:0.75rem;letter-spacing:0.04em}
+.service-card p{font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;line-height:1.8;color:#7a6a55}
+.service-tag{display:inline-block;font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.75rem;background:#e8e0d0;color:#7a6a55;margin-top:1rem}
+.service-card img{width:100%;height:200px;object-fit:cover;display:block}
 
-  /* ABOUT */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-  @media(max-width:640px){.about-grid{grid-template-columns:1fr}}
-  .about-image{aspect-ratio:3/4;background:linear-gradient(135deg,#c4b89a,#a09070);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .about-image-inner{text-align:center;color:#faf8f4}
-  .about-image-inner .big{font-size:5rem;opacity:0.4}
-  .about-text p{font-family:'Helvetica Neue',sans-serif;font-size:0.95rem;line-height:1.9;color:#5a4a35;margin-bottom:1rem}
-  .about-name{font-size:1.1rem;color:#3a2e1e;letter-spacing:0.06em;margin-top:1.5rem}
-  .about-title-sub{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;letter-spacing:0.12em;color:#a09070}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+@media(max-width:640px){.about-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
+.about-img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.about-text p{font-family:'Helvetica Neue',sans-serif;font-size:0.95rem;line-height:1.9;color:#5a4a35;margin-bottom:1rem}
+.about-name{font-size:1.1rem;color:#3a2e1e;letter-spacing:0.06em;margin-top:1.5rem}
+.about-title-sub{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;letter-spacing:0.12em;color:#a09070}
 
-  /* TESTIMONIALS */
-  .testimonials{background:#3a2e1e}
-  .testimonials .section-label{color:#a09070}
-  .testimonials .section-title{color:#f2ede4}
-  .testimonials .divider{background:#7a6a55}
-  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
-  .testi-card{padding:2rem;border:1px solid rgba(160,144,112,0.25);position:relative}
-  .testi-card::before{content:'\201C';font-size:4rem;color:#7a6a55;position:absolute;top:0.5rem;left:1.5rem;line-height:1;opacity:0.5}
-  .testi-card p{font-family:'Helvetica Neue',sans-serif;font-size:0.9rem;line-height:1.9;color:#c4b89a;padding-top:1.5rem}
-  .testi-name{font-size:0.95rem;color:#f2ede4;margin-top:1rem;letter-spacing:0.06em}
-  .testi-desc{font-family:'Helvetica Neue',sans-serif;font-size:0.75rem;color:#8a7a62;letter-spacing:0.1em;text-transform:uppercase}
+.testimonials{background:#3a2e1e}
+.testimonials .section-label{color:#a09070}
+.testimonials .section-title{color:#f2ede4}
+.testimonials .divider{background:#7a6a55}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+.testi-card{padding:2rem;border:1px solid rgba(160,144,112,0.25);position:relative}
+.testi-card::before{content:'\201C';font-size:4rem;color:#7a6a55;position:absolute;top:0.5rem;left:1.5rem;line-height:1;opacity:0.5}
+.testi-card p{font-family:'Helvetica Neue',sans-serif;font-size:0.9rem;line-height:1.9;color:#c4b89a;padding-top:1.5rem}
+.testi-name{font-size:0.95rem;color:#f2ede4;margin-top:1rem;letter-spacing:0.06em}
+.testi-desc{font-family:'Helvetica Neue',sans-serif;font-size:0.75rem;color:#8a7a62;letter-spacing:0.1em;text-transform:uppercase}
 
-  /* CONTACT */
-  .contact{background:#f2ede4}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-  @media(max-width:640px){.contact-grid{grid-template-columns:1fr}}
-  .contact-info p{font-family:'Helvetica Neue',sans-serif;font-size:0.92rem;line-height:1.9;color:#5a4a35;margin-bottom:1.5rem}
-  .contact-detail{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;color:#7a6a55}
-  .contact-detail span:first-child{width:18px;text-align:center}
-  form{display:flex;flex-direction:column;gap:1rem}
-  input,textarea{background:#faf8f4;border:1px solid rgba(139,120,90,0.25);padding:0.85rem 1rem;font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;color:#3a2e1e;outline:none;resize:none;transition:border-color 0.2s}
-  input:focus,textarea:focus{border-color:#8a7a62}
-  input::placeholder,textarea::placeholder{color:#b0a090}
-  textarea{min-height:120px}
+.contact{background:#f2ede4}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info p{font-family:'Helvetica Neue',sans-serif;font-size:0.92rem;line-height:1.9;color:#5a4a35;margin-bottom:1.5rem}
+.contact-detail{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;color:#7a6a55}
+form{display:flex;flex-direction:column;gap:1rem}
+input,textarea{background:#faf8f4;border:1px solid rgba(139,120,90,0.25);padding:0.85rem 1rem;font-family:'Helvetica Neue',sans-serif;font-size:0.88rem;color:#3a2e1e;outline:none;resize:none;transition:border-color 0.2s}
+input:focus,textarea:focus{border-color:#8a7a62}
+input::placeholder,textarea::placeholder{color:#b0a090}
+textarea{min-height:120px}
 
-  /* FOOTER */
-  footer{background:#2c2318;padding:3rem 2rem;text-align:center}
-  .footer-logo{font-size:1.3rem;letter-spacing:0.14em;color:#c4b89a;margin-bottom:1rem}
-  footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;letter-spacing:0.1em;color:#6a5a45}
+.pricing{background:#faf8f4}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+.price-card{background:#f2ede4;padding:2rem;text-align:center;border:1px solid rgba(139,120,90,0.18)}
+.price-card h3{font-size:1.1rem;font-weight:400;color:#3a2e1e;margin:0.75rem 0}
+.price-card p{font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;line-height:1.8;color:#7a6a55;margin-bottom:1rem}
+.price-amount{font-size:2.5rem;font-weight:400;color:#3a2e1e;margin:1rem 0}
+.price-duration{font-family:'Helvetica Neue',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:#a09070}
+
+footer{background:#2c2318;padding:3rem 2rem;text-align:center}
+.footer-logo{font-size:1.3rem;letter-spacing:0.14em;color:#c4b89a;margin-bottom:1rem}
+footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;letter-spacing:0.1em;color:#6a5a45}
 </style>
 </head>
 <body>
@@ -96,24 +90,23 @@
   <div class="logo">Holistic Oasis</div>
   <ul>
     <li><a href="#services">Offerings</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Book</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <p class="hero-tag">A backyard sanctuary for the soul</p>
   <h1>Restore.<br><em>Reconnect.</em><br>Return.</h1>
   <p>A private outdoor oasis offering sound baths, women's circles, cold plunge & sauna sessions — curated for deep rest and renewal.</p>
-  <a href="#services" class="btn btn-light">Explore Our Offerings</a>
+  <a href="#services" class="btn">Explore Our Offerings</a>
   <div class="scroll-hint">
     <div class="scroll-line"></div>
     <span>Scroll</span>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-inner">
     <p class="section-label">What we offer</p>
@@ -121,19 +114,19 @@
     <div class="divider"></div>
     <div class="services-grid">
 
-      <div class="service-card" style="padding:0;overflow:hidden">
-        <img src="soundbath.jpg" alt="Floating Sound Bath" style="width:100%;height:200px;object-fit:cover;display:block"/>
-        <div style="padding:1.5rem">
+      <div class="service-card">
+        <img src="soundbath.jpg" alt="Floating Sound Bath"/>
+        <div class="service-card-body">
           <div class="service-icon">🎵</div>
           <h3>Floating Sound Bath</h3>
-          <p>Immerse yourself in healing frequencies as crystal bowls and ambient sounds guide you into a state of deep relaxation and inner stillness.</p>
+          <p>Float on the pool under the stars while healing frequencies wash over you. A truly one-of-a-kind experience.</p>
           <span class="service-tag">Group & Private</span>
         </div>
       </div>
 
-      <div class="service-card" style="padding:0;overflow:hidden">
-        <img src="circle.jpg" alt="Women's Circle" style="width:100%;height:200px;object-fit:cover;display:block"/>
-        <div style="padding:1.5rem">
+      <div class="service-card">
+        <img src="circle.jpg" alt="Women's Circle"/>
+        <div class="service-card-body">
           <div class="service-icon">🌙</div>
           <h3>Women's Circle</h3>
           <p>A sacred gathering space for women to share, reflect, and reconnect. Held in the open air with intention-setting, ritual, and community.</p>
@@ -141,9 +134,9 @@
         </div>
       </div>
 
-      <div class="service-card" style="padding:0;overflow:hidden">
-        <img src="plunge.jpg" alt="Cold Plunge" style="width:100%;height:200px;object-fit:cover;display:block"/>
-        <div style="padding:1.5rem">
+      <div class="service-card">
+        <img src="plunge.jpg" alt="Cold Plunge"/>
+        <div class="service-card-body">
           <div class="service-icon">❄️</div>
           <h3>Cold Plunge</h3>
           <p>Invigorate your nervous system with a guided cold immersion session. Build resilience, reduce inflammation, and feel alive in every cell.</p>
@@ -151,9 +144,9 @@
         </div>
       </div>
 
-      <div class="service-card" style="padding:0;overflow:hidden">
-        <img src="sauna.jpg" alt="Sauna Session" style="width:100%;height:200px;object-fit:cover;display:block"/>
-        <div style="padding:1.5rem">
+      <div class="service-card">
+        <img src="sauna.jpg" alt="Sauna Session"/>
+        <div class="service-card-body">
           <div class="service-icon">🔥</div>
           <h3>Sauna Session</h3>
           <p>Unwind in our outdoor sauna under open sky. Detox, decompress, and let the warmth melt away tension at your own pace.</p>
@@ -162,25 +155,56 @@
       </div>
 
       <div class="service-card">
-        <div class="service-icon">✨</div>
-        <h3>Contrast Therapy</h3>
-        <p>Pair cold plunge and sauna for the ultimate contrast therapy experience — alternating heat and cold to boost circulation and recovery.</p>
-        <span class="service-tag">Popular Combo</span>
+        <div class="service-card-body">
+          <div class="service-icon">✨</div>
+          <h3>Contrast Therapy</h3>
+          <p>Pair cold plunge and sauna for the ultimate contrast therapy experience — alternating heat and cold to boost circulation and recovery.</p>
+          <span class="service-tag">Popular Combo</span>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <p class="section-label">Investment</p>
+    <h2 class="section-title">Simple, <em>transparent</em> pricing</h2>
+    <div class="divider"></div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div style="font-size:1.8rem">❄️🔥</div>
+        <h3>Contrast Therapy</h3>
+        <p>Sauna + cold plunge. Rinse with a fresh shower in between. The ultimate reset for body and mind.</p>
+        <div class="price-amount">$30</div>
+        <div class="price-duration">30 minute session</div>
+      </div>
+      <div class="price-card">
+        <div style="font-size:1.8rem">🎵</div>
+        <h3>Floating Sound Bath</h3>
+        <p>Float on the pool under the stars while healing frequencies guide you into deep rest.</p>
+        <div class="price-amount" style="font-size:1.5rem;margin:1rem 0">Contact us</div>
+        <div class="price-duration">Group sessions</div>
+      </div>
+      <div class="price-card">
+        <div style="font-size:1.8rem">🌙</div>
+        <h3>Women's Circle</h3>
+        <p>Sacred outdoor gatherings for women to connect, reflect, and restore together.</p>
+        <div class="price-amount" style="font-size:1.5rem;margin:1rem 0">Contact us</div>
+        <div class="price-duration">Group sessions</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;font-family:'Helvetica Neue',sans-serif;font-size:1rem;color:#5a4a35">
+      Call or text to reserve &nbsp;·&nbsp; <a href="tel:8505023661" style="color:#3a2e1e;font-weight:500">850-502-3661</a>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="section-inner">
     <div class="about-grid">
-      <div class="about-image">
-        <div class="about-image-inner">
-          <div class="big">🌿</div>
-        </div>
-      </div>
+      <img src="about.jpg" alt="Holistic Oasis" class="about-img"/>
       <div class="about-text">
         <p class="section-label">Our story</p>
         <h2 class="section-title">A <em>sanctuary</em> born from love</h2>
@@ -195,42 +219,6 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section style="background:#faf8f4;padding:6rem 2rem">
-  <div class="section-inner">
-    <p class="section-label">Investment</p>
-    <h2 class="section-title">Simple, <em>transparent</em> pricing</h2>
-    <div class="divider"></div>
-    <div class="services-grid" style="margin-top:3rem">
-      <div class="service-card" style="text-align:center">
-        <div class="service-icon">❄️🔥</div>
-        <h3>Contrast Therapy</h3>
-        <p>30 minutes in the barrel sauna, rinse with a fresh shower, then soak in the cold plunge. The ultimate reset.</p>
-        <div style="font-size:2rem;font-weight:400;color:#3a2e1e;margin:1rem 0">$30</div>
-        <span class="service-tag">30 min session</span>
-      </div>
-      <div class="service-card" style="text-align:center">
-        <div class="service-icon">🎵</div>
-        <h3>Floating Sound Bath</h3>
-        <p>Float on the pool under the stars while healing frequencies wash over you. A truly one-of-a-kind experience.</p>
-        <div style="font-size:2rem;font-weight:400;color:#3a2e1e;margin:1rem 0">Contact us</div>
-        <span class="service-tag">Group sessions</span>
-      </div>
-      <div class="service-card" style="text-align:center">
-        <div class="service-icon">🌙</div>
-        <h3>Women's Circle</h3>
-        <p>Sacred outdoor gatherings for women to connect, reflect, and restore together in a safe and loving space.</p>
-        <div style="font-size:2rem;font-weight:400;color:#3a2e1e;margin:1rem 0">Contact us</div>
-        <span class="service-tag">Group sessions</span>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:3rem;font-family:'Helvetica Neue',sans-serif;font-size:1rem;color:#5a4a35">
-      Call or text to reserve &nbsp;·&nbsp; <a href="tel:8505023661" style="color:#3a2e1e;font-weight:500">850-502-3661</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="section-inner">
     <p class="section-label">Voices from the oasis</p>
@@ -256,7 +244,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-inner">
     <div class="contact-grid">
@@ -266,15 +253,16 @@
         <div class="divider"></div>
         <p>All experiences are held in an intimate outdoor setting. Sessions are kept small and intentional — we'd love to welcome you.</p>
         <div class="contact-detail"><span>📍</span><span>Private residence · location shared on booking</span></div>
+        <div class="contact-detail"><span>📞</span><span><a href="tel:8505023661">850-502-3661</a></span></div>
         <div class="contact-detail"><span>📧</span><span>hello@holisticoasis.com</span></div>
         <div class="contact-detail"><span>📱</span><span>@holisticoasis</span></div>
       </div>
       <form onsubmit="return false">
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Email address" />
-        <input type="text" placeholder="Which offering interests you?" />
+        <input type="text" placeholder="Your name"/>
+        <input type="email" placeholder="Email address"/>
+        <input type="text" placeholder="Which offering interests you?"/>
         <textarea placeholder="Any questions or special requests?"></textarea>
-        <button type="submit" class="btn" style="align-self:flex-start">Send Inquiry</button>
+        <button type="submit" class="btn" style="align-self:flex-start;color:#3a2e1e;border-color:#8a7a62">Send Inquiry</button>
       </form>
     </div>
   </div>
